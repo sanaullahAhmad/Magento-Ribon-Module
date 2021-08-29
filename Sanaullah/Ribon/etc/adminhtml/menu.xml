@@ -1,0 +1,17 @@
+<!--
+/*
+ * Sanaullah_Ribon
+
+ * @category   Sanaullah
+ * @package    Sanaullah_Ribon
+ * @copyright  Copyright (c) 2019 Scott Parsons
+ * @license    https://github.com/ScottParsons/module-sampleuicomponent/blob/master/LICENSE.md
+ * @version    1.1.2
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Sanaullah_Ribon::data" title="Ribon Data" module="Sanaullah_Ribon" sortOrder="75" resource="Sanaullah_Ribon::data"
+             action="ribon/data/index"/>
+    </menu>
+</config>

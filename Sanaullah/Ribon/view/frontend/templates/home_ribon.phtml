@@ -1,0 +1,38 @@
+<h1>Home Ribon Phtml</h1>
+<?php
+$objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+$resource = $objectManager->get('Magento\Framework\App\ResourceConnection');
+$connection = $resource->getConnection();
+$tableName = $resource->getTableName('sanaullah_ribon_data');
+$sql = "Select * FROM " . $tableName." where start_time <= CURRENT_TIMESTAMP AND end_time >= CURRENT_TIMESTAMP ";
+$result = $connection->fetchAll($sql);
+
+$request = $objectManager->get('Magento\Framework\App\Action\Context')->getRequest();
+
+foreach($result ?? [] as $ribon){
+
+    if($ribon['visible_pages']=='home'){
+        if ($request->getFullActionName() == 'cms_index_index' ) {
+        // is homepage
+         ?>
+         <div style="background-color: <?php echo $ribon['band_color'];?>;">
+            title:<?php echo $ribon['title'];?></br>
+            Description:<?php echo $ribon['description'];?></br>
+        </div>
+         <?php
+        }
+    }
+    elseif($ribon['visible_pages']=='all'){
+        if($request->getModuleName()=='cms' || $request->getFullActionName() == 'cms_index_index'){
+            ?>
+            <div style="background-color: <?php echo $ribon['band_color'];?>;">
+               title:<?php echo $ribon['title'];?></br>
+               Description:<?php echo $ribon['description'];?></br>
+
+           </div>
+            <?php
+        }
+    }
+
+}
+?>

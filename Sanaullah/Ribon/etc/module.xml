@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!--
+/*
+ * Sanaullah_Ribon
+
+ * @category   Sanaullah
+ * @package    Sanaullah_Ribon
+ * @copyright  Copyright (c) 2019 Scott Parsons
+ * @license    https://github.com/ScottParsons/module-sampleuicomponent/blob/master/LICENSE.md
+ * @version    1.1.2
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
+    <module name="Sanaullah_Ribon" setup_version="1.0.0" />
+</config>
