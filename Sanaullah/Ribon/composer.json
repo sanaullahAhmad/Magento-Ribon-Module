@@ -1,5 +1,5 @@
 {
-  "name": "sanaullah/module-sampleuicomponent",
+  "name": "sanaullah/ribon",
   "description": "A Magento 2 ribon module demonstrating how to implement a grid and form UI Component.",
   "version": "1.1.2",
   "license": "MIT",
@@ -7,7 +7,7 @@
   "repositories": [
     {
       "type": "git",
-      "url": "https://github.com/ScottParsons/module-sampleuicomponent"
+      "url": "https://github.com/sanaullahAhmad/Magento-Ribon-Module"
     }
   ],
   "autoload": {
